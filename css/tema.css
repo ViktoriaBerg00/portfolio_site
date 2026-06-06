@@ -1,0 +1,90 @@
+main {
+  padding: 2rem;
+}
+
+.tema-header {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.loesning,
+.proces,
+.laering {
+  padding: 4rem 0;
+}
+/* CURVED BACKROUND LINE*/
+
+main::before {
+  content: "";
+
+  position: fixed;
+  inset: 0;
+
+  background-image: url("../images/curved-line-new.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  opacity: 0.4;
+
+  z-index: -1;
+}
+/* TEMA 1 */
+
+main {
+  padding: 2rem;
+}
+
+.tema-hero {
+  text-align: center;
+  padding: 5rem 0;
+}
+
+.tema-hero h1 {
+  font-size: 4rem;
+}
+
+.tema-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 3rem;
+
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 4rem;
+
+  border-radius: 6rem;
+}
+
+.beige {
+  background-color: var(--beige);
+}
+
+.green {
+  background-color: var(--groen);
+}
+
+.tema-text {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.tema-text p {
+  max-width: 300px;
+}
+
+.tema-text a {
+  background-color: var(--baggrund);
+  color: var(--tekst);
+  text-decoration: none;
+
+  width: fit-content;
+  padding: 1rem 2rem;
+  border-radius: 3rem;
+}
+
+.tema-section img {
+  width: 100%;
+  border-radius: 1rem;
+}

@@ -1,0 +1,117 @@
+main {
+  padding: 2rem;
+}
+h1 {
+  font-size: var(--h1);
+}
+h2 {
+  font-size: var(--h2);
+}
+h3 {
+  font-size: var(--h3);
+}
+p {
+  font-size: var(--tekststorrelse);
+}
+/* CURVED BACKROUND LINE*/
+
+body::before {
+  content: "";
+
+  position: fixed;
+  inset: 0;
+
+  background-image: url("../images/curved-line.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  opacity: 0.4;
+
+  z-index: -1;
+}
+/* HERO */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  min-height: calc(100vh - 120px);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 8rem;
+  text-align: center;
+}
+
+.hero-content {
+  grid-column: 2;
+}
+
+.hero h1 {
+  font-size: var(--h1);
+  line-height: 0.9;
+  white-space: nowrap;
+}
+
+.hero h2 {
+  margin-top: 1.5rem;
+}
+
+.hero p {
+  margin-top: 1.5rem;
+  max-width: 500px;
+  margin-inline: auto;
+  font-size: 1.2rem;
+}
+
+/* BILLEDE KARRUSEL*/
+
+.karrussel {
+  overflow: hidden;
+  margin-bottom: 8rem;
+}
+
+.karrussel-track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: slide 20s linear infinite;
+}
+
+.karrussel-card {
+  width: 350px;
+  flex-shrink: 0;
+}
+
+.karrussel-card img {
+  width: 100%;
+  height: 250px;
+  border-radius: 2rem;
+  transition: transform 0.3s ease;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+/* TEMAER */
+
+.temaer {
+  margin-top: 6rem;
+}
+
+.tema-card {
+  background-color: var(--beige);
+  padding: 2rem;
+  border-radius: 2rem;
+  margin-top: 2rem;
+}
+/* KONTAKT */
+
+.kontakt {
+  margin-top: 6rem;
+}

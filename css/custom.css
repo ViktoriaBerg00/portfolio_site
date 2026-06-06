@@ -1,0 +1,23 @@
+:root {
+  /* Farver */
+
+  --baggrund: #f2ebe2;
+  --tekst: #000000;
+  --groen: #8f9779;
+  --beige: #d8c1b0;
+  --roed: #a0272b;
+
+  /* Fonte */
+
+  --font-display: "Clash Display", sans-serif;
+  --font-overskrift: "Figtree", sans-serif;
+  --font-tekst: "Host Grotesk", sans-serif;
+
+  /* Størrelser */
+
+  --h1: 8rem;
+  --h2: 4rem;
+  --h3: 2rem;
+  --h4: 1.8rem;
+  --tekststorrelse: 1rem;
+}

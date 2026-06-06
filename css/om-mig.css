@@ -1,0 +1,58 @@
+main {
+  padding: 2rem;
+}
+
+h1 {
+  font-size: var(--h1);
+}
+h2 {
+  font-size: var(--h2);
+}
+h3 {
+  font-size: var(--h3);
+}
+p {
+  font-size: var(--tekststorrelse);
+}
+/* OM MIG */
+.om-mig {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+
+  max-height: 100vh;
+  text-align: center;
+
+  background-image: url("../images/viktoriaskrift.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.om-mig h1 {
+  margin-bottom: 1rem;
+  font-size: 6rem;
+}
+
+.profilbillede {
+  width: 300px;
+  border-radius: 20%;
+  margin-bottom: 2rem;
+}
+
+.info {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.info p {
+  font-size: 1.2rem;
+}
+
+/* SECTIONS */
+
+.erfaring,
+.laering,
+.kompetencer {
+  padding: 4rem 0;
+}
