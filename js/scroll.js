@@ -1,18 +1,31 @@
-const path = document.querySelector("#scrollPath");
+const svg = document.querySelector("svg.curved-line");
 
-if (path) {
+if (svg) {
+  const path = svg.querySelector("path");
+
   const pathLength = path.getTotalLength();
 
   path.style.strokeDasharray = pathLength;
   path.style.strokeDashoffset = pathLength;
 
-  window.addEventListener("scroll", () => {
-    const scrollTop = window.scrollY;
+  const setSvgHeight = () => {
+    svg.style.height = document.body.scrollHeight + "px";
+  };
 
-    const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const scroll = () => {
+    setSvgHeight();
 
-    const scrollPercent = scrollTop / documentHeight;
+    const distance = window.scrollY;
+    const totalDistance = document.documentElement.scrollHeight - window.innerHeight;
 
-    path.style.strokeDashoffset = pathLength * (1 - scrollPercent);
-  });
+    const percentage = distance / totalDistance;
+
+    path.style.strokeDashoffset = pathLength * (1 - percentage);
+  };
+
+  setSvgHeight();
+  scroll();
+
+  window.addEventListener("scroll", scroll);
+  window.addEventListener("resize", scroll);
 }

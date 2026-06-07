@@ -1,20 +1,17 @@
 :root {
   /* Farver */
-
   --baggrund: #f2ebe2;
   --tekst: #000000;
   --groen: #8f9779;
   --beige: #d8c1b0;
-  --roed: #cf0007;
+  --roed: #cd3c2f;
 
   /* Fonte */
-
   --font-display: "Clash Display", sans-serif;
   --font-overskrift: "Figtree", sans-serif;
   --font-tekst: "Host Grotesk", sans-serif;
 
   /* Størrelser */
-
   --h1: 8rem;
   --h2: 4rem;
   --h3: 2rem;

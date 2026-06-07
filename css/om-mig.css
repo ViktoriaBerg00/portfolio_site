@@ -1,26 +1,11 @@
-main {
-  padding: 2rem;
-}
+/* OM MIG HERO */
 
-h1 {
-  font-size: var(--h1);
-}
-h2 {
-  font-size: var(--h2);
-}
-h3 {
-  font-size: var(--h3);
-}
-p {
-  font-size: var(--tekststorrelse);
-}
-/* OM MIG */
 .om-mig {
   display: grid;
   justify-items: center;
   align-content: center;
 
-  max-height: 100vh;
+  min-height: 80vh;
   text-align: center;
 
   background-image: url("../images/viktoriaskrift.svg");
@@ -41,18 +26,94 @@ p {
 }
 
 .info {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.navn {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.info p:not(.navn) {
+  opacity: 0.8;
+}
+
+/* om mig indhold */
+
+.om-indhold {
+  max-width: 900px;
+  margin: 6rem auto;
   display: grid;
-  gap: 0.8rem;
+  gap: 2rem;
 }
 
-.info p {
-  font-size: 1.2rem;
+.om-kort {
+  background: var(--beige);
+  padding: 3rem;
+  border-radius: 3rem;
 }
 
-/* SECTIONS */
+.om-kort:nth-child(even) {
+  background: var(--groen);
+}
 
-.erfaring,
-.laering,
+.om-kort h2 {
+  margin-bottom: 1rem;
+  font-size: var(--h3);
+}
+
+.om-kort p {
+  line-height: 1.7;
+  max-width: 650px;
+}
+
+/*Kompetencer*/
+
 .kompetencer {
-  padding: 4rem 0;
+  max-width: 700px;
+  margin: 6rem auto;
+  padding: 3rem;
+  border-radius: 4rem;
+  background: var(--beige);
+}
+
+.kompetencer h3 {
+  margin-bottom: 2rem;
+}
+
+.skill {
+  display: grid;
+  grid-template-columns: 180px auto;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.dots {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: black;
+}
+
+.dots span.filled {
+  background: var(--roed);
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+  .om-mig h1 {
+    font-size: 4rem;
+  }
+
+  .profilbillede {
+    width: 240px;
+  }
 }
