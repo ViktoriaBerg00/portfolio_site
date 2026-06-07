@@ -217,7 +217,7 @@ svg.curved-line {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1;
+  z-index: -1;
   pointer-events: none;
   overflow: visible;
 }
@@ -230,5 +230,5 @@ main,
 header,
 footer {
   position: relative;
-  z-index: 2;
+  z-index: 99999;
 }
