@@ -8,6 +8,7 @@
   margin: 0 auto;
   padding-top: 8rem;
   text-align: center;
+  animation: heroFade 2s ease forwards;
 }
 
 .hero-content {
@@ -28,6 +29,18 @@
   max-width: 500px;
   margin-inline: auto;
   font-size: 1.2rem;
+}
+
+@keyframes heroFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 /* KARRUSEL */
@@ -148,16 +161,43 @@
   color: white;
   padding: 0.8rem 1.4rem;
   border-radius: 999px;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+.tema-links a:last-child {
+  color: var(--tekst);
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+.tema-links a:first-child:hover {
+  transform: translateY(-3px);
+  background-color: var(--tekst);
+  color: white;
 }
 
 .tema-links a:last-child {
   color: var(--roed);
 }
-
+.tema-links a:last-child:hover {
+  transform: translateY(-3px);
+  color: var(--tekst);
+}
 .tema-card:nth-of-type(even) .tema-links a:last-child {
   color: var(--baggrund);
-}
 
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+.tema-card:nth-of-type(even) .tema-links a:last-child:hover {
+  color: var(--tekst);
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
 /* MOBILE */
 
 @media (max-width: 800px) {

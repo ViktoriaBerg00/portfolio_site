@@ -1,9 +1,10 @@
 :root {
   /* Farver */
   --baggrund: #f2ebe2;
-  --tekst: #000000;
+  --tekst: hsl(0, 0%, 0%);
+  --tekst2: #f2ebe2;
   --groen: #8f9779;
-  --beige: #d8c1b0;
+  --beige: #d8ccbf;
   --roed: #cd3c2f;
 
   /* Fonte */

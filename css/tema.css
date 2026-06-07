@@ -25,6 +25,7 @@
 }
 
 .green {
+  color: var(--tekst2);
   background-color: var(--groen);
 }
 
@@ -46,6 +47,29 @@
   object-fit: cover;
 }
 
+/*Projekt link*/
+.projekt-link {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.projekt-link a {
+  display: inline-block;
+
+  background-color: var(--roed);
+  color: white;
+
+  text-decoration: none;
+  font-weight: 600;
+
+  padding: 1rem 2.2rem;
+
+  border-radius: 999px;
+
+  transition: all 0.3s ease;
+}
+
 /* MOBILE */
 
 @media (max-width: 800px) {
@@ -62,5 +86,9 @@
 
   .tema-hero h1 {
     font-size: 3rem;
+  }
+
+  svg.curved-line {
+    display: none;
   }
 }
