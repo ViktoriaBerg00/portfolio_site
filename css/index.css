@@ -13,7 +13,7 @@ h3 {
 p {
   font-size: var(--tekststorrelse);
 }
-/* CURVED BACKROUND LINE*/
+/* CURVED BACKROUND LINE
 
 body::before {
   content: "";
@@ -29,6 +29,27 @@ body::before {
   opacity: 0.4;
 
   z-index: -1;
+}
+  */
+
+#curved-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: -1;
+  pointer-events: none;
+}
+
+#curved-line path {
+  fill: none;
+  stroke: #dfcdb7;
+  stroke-width: 8px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 /* HERO */
 
@@ -101,14 +122,81 @@ body::before {
 /* TEMAER */
 
 .temaer {
-  margin-top: 6rem;
+  max-width: 1200px;
+  margin: 8rem auto 0;
+}
+
+.temaer h2 {
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .tema-card {
-  background-color: var(--beige);
-  padding: 2rem;
-  border-radius: 2rem;
-  margin-top: 2rem;
+  background: linear-gradient(135deg, var(--beige), var(--baggrund));
+  border-radius: 4rem;
+  padding: 3rem;
+  margin-bottom: 3rem;
+
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 2rem;
+
+  transition: transform 0.3s ease;
+}
+
+.tema-card:nth-child(even) {
+  border-radius: 4rem;
+  background: linear-gradient(135deg, var(--groen), var(--beige));
+}
+
+.tema-card h3 {
+  font-size: var(--h3);
+}
+
+.tema-card h4 {
+  font-size: 2rem;
+}
+
+.tema-card p {
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+/* LINKS / KNAPPER */
+
+.tema-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.tema-links a {
+  display: inline-block;
+
+  padding: 0.8rem 1.4rem;
+  border-radius: 999px;
+
+  text-decoration: none;
+  font-weight: 600;
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.tema-links a:first-child {
+  background-color: var(--tekst);
+  color: var(--baggrund);
+}
+
+.tema-links a:last-child {
+  background-color: var(--baggrund);
+  color: var(--tekst);
+}
+
+.tema-links a:hover {
+  transform: translateY(-3px);
 }
 /* KONTAKT */
 
