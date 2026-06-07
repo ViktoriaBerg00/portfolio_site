@@ -8,6 +8,8 @@
   margin: 0 auto;
   padding-top: 8rem;
   text-align: center;
+  opacity: 0;
+  transform: translateY(20px) scale(0.9);
   animation: heroFade 2s ease forwards;
 }
 
