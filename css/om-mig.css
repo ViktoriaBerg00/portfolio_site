@@ -37,7 +37,7 @@
 
 .om-mig h1 {
   margin-bottom: 1rem;
-  font-size: 6rem;
+  font-size: var(--h1);
 }
 
 .profilbillede {
@@ -134,9 +134,6 @@
 /* MOBILE */
 
 @media (max-width: 800px) {
-  .om-mig h1 {
-    font-size: 4rem;
-  }
 
   .profilbillede {
     width: 240px;

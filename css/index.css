@@ -30,7 +30,7 @@
   margin-top: 1.5rem;
   max-width: 500px;
   margin-inline: auto;
-  font-size: 1.2rem;
+  font-size: var(--tekststorrelse);
 }
 
 @keyframes heroFade {
@@ -134,7 +134,7 @@
 }
 
 .tema-card h4 {
-  font-size: 1.2rem;
+  font-size: var(--h4);
   letter-spacing: 0.18rem;
   text-transform: uppercase;
 }
@@ -213,7 +213,7 @@
   }
 
   .hero h1 {
-    font-size: 4rem;
+    font-size: var(--h1);
     white-space: normal;
   }
 

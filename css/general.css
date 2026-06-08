@@ -7,10 +7,13 @@ body {
   background-color: var(--baggrund);
   color: var(--tekst);
   font-family: var(--font-tekst);
+    overflow-x: hidden;
 }
 
 main {
   padding: 2rem;
+ position: relative;
+  z-index: 2;
 }
 
 h1,
@@ -60,6 +63,8 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
+  position: relative;
+  z-index: 10000;
 }
 
 .logo img {
@@ -79,12 +84,14 @@ nav a {
   text-decoration: none;
   font-family: var(--font-tekst);
   font-size: var(--tekststorrelse);
+     font-weight: 1000;
 }
 
 /* DROPDOWN */
 
 .dropdown {
   position: relative;
+  
 }
 
 #dropdown-btn {
@@ -92,9 +99,10 @@ nav a {
   border: none;
   color: var(--tekst);
   font-family: var(--font-tekst);
-  font-size: 1rem;
+  font-size: var(--tekststorrelse);
   cursor: pointer;
   padding: 0;
+    font-weight: 1000;
 }
 
 #dropdown-menu {
@@ -107,8 +115,7 @@ nav a {
   padding: 1rem;
   border-radius: 1rem;
   min-width: 140px;
-
-  z-index: 9999;
+  z-index: 10001;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
@@ -126,18 +133,37 @@ nav a {
   display: block;
   text-decoration: none;
   white-space: nowrap;
+   font-weight: 1000;
 }
 /* BURGER MENU*/
 .burger-btn {
   display: none;
 }
+/* ACCESSIBILITY FOCUS */
+button,
+a,
+#dropdown-btn,
+.burger-btn {
+  outline: none;
+}
 
+button:focus-visible,
+a:focus-visible,
+#dropdown-btn:focus-visible,
+.burger-btn:focus-visible,
+#dropdown-menu a:focus-visible,
+nav a:focus-visible {
+  outline: 3px solid var(--roed);
+  outline-offset: 3px;
+}
 /* FOOTER */
 
 footer {
   text-align: center;
   padding: 8rem 2rem 4rem;
   background-color: var(--beige);
+  position: relative;
+  z-index: 2;
 }
 
 .footer-logo {
@@ -222,30 +248,6 @@ svg.curved-line {
   overflow: visible;
 }
 
-body {
-  overflow-x: hidden;
-}
-
-/*Positioning / z index to fix drop down menu problem*/
-
-header {
-  position: relative;
-  z-index: 10000;
-}
-
-main {
-  position: relative;
-  z-index: 2;
-}
-
-footer {
-  position: relative;
-  z-index: 2;
-}
-
-#dropdown-menu {
-  z-index: 10001;
-}
 
 /*MOBILE LAYOUT*/
 
@@ -300,4 +302,43 @@ footer {
   .burger-btn.active span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -7px);
   }
+
+  .dropdown {
+    position: static;
+    width: 100%;
+  }
+
+  #dropdown-menu {
+    position: static;
+    display: none;
+    margin: 0.6rem 0 0;
+    padding: 0.8rem 0;
+    background: var(--baggrund);
+    border-radius: 1rem;
+  }
+
+  #dropdown-menu.show {
+    display: block;
+  }
+
+  #dropdown-menu a {
+    display: block;
+    padding: 0.8rem 1rem;
+    text-decoration: none;
+    color: var(--tekst);
+  }
+
+  #dropdown-menu a + a {
+    margin-top: 0.4rem;
+  }
+
+
+  /* større klikflade for links */
+  nav a,
+  #dropdown-btn {
+    display: block;
+    padding: 0.7rem 1rem;
+    border-radius: 0.8rem;
+  }
+
 }
