@@ -78,6 +78,7 @@ nav ul {
 nav a {
   text-decoration: none;
   font-family: var(--font-tekst);
+  font-size: var(--tekststorrelse);
 }
 
 /* DROPDOWN */
@@ -125,6 +126,10 @@ nav a {
   display: block;
   text-decoration: none;
   white-space: nowrap;
+}
+/* BURGER MENU*/
+.burger-btn {
+  display: none;
 }
 
 /* FOOTER */
@@ -240,4 +245,59 @@ footer {
 
 #dropdown-menu {
   z-index: 10001;
+}
+
+/*MOBILE LAYOUT*/
+
+/*BURGER MENU*/
+@media (max-width: 800px) {
+  .burger-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10002;
+  }
+
+  .burger-btn span {
+    width: 28px;
+    height: 3px;
+    background: var(--tekst);
+    border-radius: 999px;
+    transition: 0.3s ease;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 1.5rem;
+    background: var(--beige);
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    z-index: 10001;
+  }
+
+  nav.active {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .burger-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+
+  .burger-btn.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
 }
